@@ -19,12 +19,12 @@
 import random
 
 
-user_input=input("Please enter a string of 10 characters:")
+user_input = input("Please enter a string of 10 characters:")
 while len(user_input) != 10:
-    if len(user_input) < 10:
+    if len(user_input) > 10:
         print("String not long enough.")
     else:
-        print("String is too long.")
+        print("String is too short.")
 
     user_input = input("Try again: ")
 
@@ -37,9 +37,9 @@ for item in list_chars:
     toconcat += item
     print(toconcat)
 
-list_to_shuffle = list(user_input)
-random.shuffle(list_to_shuffle)
-print("The shuffled string is:", ''.join(list_to_shuffle))
+random.shuffle(list_chars)
+print("The shuffled string is:", ''.join(list_chars))
+print(list_chars)
 
     
     
